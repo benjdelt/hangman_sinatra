@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Hangman</title>
+  </head>
+  <body>
+    <h1>Hangman</h1>
+        <p><%= @output %></p>
+        <p><%= @message %></p>
+        <form method="post">
+          <input type="text" name="letter" maxlength="1"/>
+          <input type="submit"/>
+        </form>
+        <p><%= @chances_left %></p>
+        <p><%= @used_letters %></p>
+        <p><%= @end_message %></p>
+        <form>
+          <input type="button" name="new_game" value="New Game"/>
+        </form>
+        <p><%= @@word %></p>
+  </body>
+</htmk>
