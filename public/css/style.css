@@ -1,0 +1,63 @@
+body {
+  background-color: #e3cd87;
+
+   
+}
+h1 {
+  font-family: "bookman", "serif";
+  font-size: 36pt;
+  font-weight: bold;
+  text-align: center;
+  padding: 30px;
+
+}
+#main {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.game {
+  background-color: #887b51;
+  padding: 150px;
+}
+
+.game p, .game form input {
+  padding: 10px;
+  font-size: 16pt;
+}
+
+#output {
+  font-size: 36pt;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
+#letter {
+  max-width: 60px;
+  margin-left: 60px;
+}
+
+#message {
+  font-weight: bold;
+  font-style: italic;
+}
+
+#won {
+  color:#004000;
+  font-weight: bold;
+}
+
+#lost {
+  color:#7f0000;
+  font-weight: bold;
+}
+
+#new_game {
+  margin-top: 30px;
+  margin-left: 60px;
+}
+
+#word {
+  visibility: hidden;
+}

@@ -1,21 +1,34 @@
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Hangman</title>
   </head>
   <body>
-    <h1>Hangman</h1>
-        <p><%= @output %></p>
-        <p><%= @message %></p>
+    <h1>HANGMAN</h1>
+    <div id=main>
+      <div class="game">
+        <p id="output"><%= @output %></p>
+        
         <form method="post">
-          <input type="text" name="letter" maxlength="1"/>
-          <input type="submit"/>
+          <input id="letter" type="text" name="letter" maxlength="1"/>
+          <input type="submit" value="Try"/>
         </form>
-        <p><%= @chances_left %></p>
-        <p><%= @used_letters %></p>
-        <p><%= @end_message %></p>
-        <form>
-          <input type="button" name="new_game" value="New Game"/>
+        <br>
+        <p id="message"><%= @message %></p>
+        <br>
+        <p id="<%= @end_message_id %>"><%= @end_message %></p>
+        <br>
+        <p>You have <%= @chances_left %> chances left</p>
+        <p>you already tried: <%= @used_letters %></p>
+        <form action="/new_game">
+          <input id="new_game" type="submit" value="New Game"/>
         </form>
-        <p><%= @@word %></p>
+        <p id="word"><%= @word %></p>
+      </div>
+      <div class="image">
+        <img src="<%= @image %>">
+      </div>
+    </div>
   </body>
 </htmk>
