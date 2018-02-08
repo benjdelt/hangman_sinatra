@@ -17,7 +17,7 @@ class Hangman
     @end_message = ""
   end
   def select_word
-    
+     @word = @dictionary.sample.chomp.upcase.split('')
   end 
   def check_input(input)
     return if input == nil
@@ -54,6 +54,7 @@ class Hangman
   end 
 
 end
+
 
 
 
