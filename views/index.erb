@@ -20,7 +20,9 @@
         <p id="<%= @end_message_id %>"><%= @end_message %></p>
         <br>
         <p>You have <%= @chances_left %> chances left</p>
-        <p>you already tried: <%= @used_letters %></p>
+        <% unless @used_letters.empty? %>
+          <p>You've already tried: <%= @used_letters %></p>
+        <% end %>
         <form action="/new_game">
           <input id="new_game" type="submit" value="New Game"/>
         </form>
