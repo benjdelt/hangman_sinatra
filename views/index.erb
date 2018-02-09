@@ -23,6 +23,7 @@
         <% unless @used_letters.empty? %>
           <p>You've already tried: <%= @used_letters %></p>
         <% end %>
+        <p><%= @word %></p>
         <form action="/new_game">
           <input id="new_game" type="submit" value="New Game"/>
         </form>

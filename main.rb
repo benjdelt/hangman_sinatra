@@ -65,30 +65,34 @@ class Hangman
 
 end
 
+
+
 get '/' do 
-  #@word = @@hangman.word
+  session[:hangman] = @@hangman 
+  @word = session[:hangman].word
   @letter = params['letter']
-  @message = @@hangman.message
-  @output = @@hangman.output.join(' ')
-  @used_letters = @@hangman.used_letters.join(', ')
-  @chances_left = @@hangman.chances
-  @end_message = @@hangman.end_message
+  @message = session[:hangman].message
+  @output = session[:hangman].output.join(' ')
+  @used_letters = session[:hangman].used_letters.join(', ')
+  @chances_left = session[:hangman].chances
+  @end_message = session[:hangman].end_message
   @image = "images/#{@chances_left.to_s}.jpg"
-  @end_message_id = @@hangman.end_message_id
+  @end_message_id = session[:hangman].end_message_id
   erb :index
   
 end 
 
 post '/' do
-  #@word = @@hangman.word
+  session[:hangman] = @@hangman 
+  @word = session[:hangman].word
   @letter = params['letter']
-  @message = @@hangman.message
-  @output = @@hangman.output.join(' ')
-  @used_letters = @@hangman.used_letters.join(', ')
-  @chances_left = @@hangman.chances
-  @end_message = @@hangman.end_message
+  @message = session[:hangman].message
+  @output = session[:hangman].output.join(' ')
+  @used_letters = session[:hangman].used_letters.join(', ')
+  @chances_left = session[:hangman].chances
+  @end_message = session[:hangman].end_message
   @image = "images/#{@chances_left.to_s}.jpg"
-  @end_message_id = @@hangman.end_message_id
+  @end_message_id = session[:hangman].end_message_id
   @@hangman.check_input(@letter)
   @@hangman.end_game?
   redirect '/'
