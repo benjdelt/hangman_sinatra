@@ -19,7 +19,7 @@
         <br>
         <p id="<%= @end_message_id %>"><%= @end_message %></p>
         <br>
-        <p>You have <%= @chances_left %> chances left</p>
+        <p>You have <%= @chances_left %> possible mistakes left</p>
         <% unless @used_letters.empty? %>
           <p>You've already tried: <%= @used_letters %></p>
         <% end %>
