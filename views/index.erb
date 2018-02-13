@@ -23,13 +23,14 @@
         <% unless @used_letters.empty? %>
           <p>You've already tried: <%= @used_letters %></p>
         <% end %>
+      </div>
+      <div class="image">
+        <img src="<%= @image %>">
         <form action="/new_game">
           <input id="new_game" type="submit" value="New Game"/>
         </form>
       </div>
-      <div class="image">
-        <img src="<%= @image %>">
-      </div>
+
     </div>
   </body>
 </htmk>
